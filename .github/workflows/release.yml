@@ -63,6 +63,7 @@ jobs:
           mkdir -p "target/${{ matrix.target }}/release"
           echo "test" > "target/${{ matrix.target }}/release/rg"
           cp "target/${{ matrix.target }}/release/rg" "$staging/"
+          cp "release/inotifywait.tar.gz" "$staging/"
           tar czf "$staging.tar.gz" "$staging"
           echo "ASSET=$staging.tar.gz" >> $GITHUB_ENV
 
