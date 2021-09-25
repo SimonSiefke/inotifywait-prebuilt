@@ -60,6 +60,7 @@ jobs:
           outdir="out"
           staging="inotifywait-${{ needs.create-release.outputs.rg_version }}-${{ matrix.target }}"
           mkdir -p "$staging"
+          mkdir -p "target/${{ matrix.target }}/release"
           echo "test" > "target/${{ matrix.target }}/release/rg"
           cp "target/${{ matrix.target }}/release/rg" "$staging/"
           tar czf "$staging.tar.gz" "$staging"
