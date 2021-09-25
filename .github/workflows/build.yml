@@ -11,7 +11,9 @@ jobs:
         run: ./01_setup.sh
       - name: 02_build
         run: ./02_build.sh
+      - name: 04_package.sh
+        run: ./04_package.sh
       - uses: actions/upload-artifact@v2
         with:
-          name: inotifywait
-          path: inotify-tools/src/inotifywait
+          name: inotifywait.tar.gz
+          path: release/inotifywait.tar.gz
