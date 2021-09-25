@@ -37,11 +37,14 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        build: [linux]
+        build: [linux, linux-arm]
         include:
           - build: linux
             os: ubuntu-20.04
             target: x86_64-unknown-linux-musl
+          - build: linux-arm
+            os: ubuntu-20.04
+            target: arm-unknown-linux-gnueabihf
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
