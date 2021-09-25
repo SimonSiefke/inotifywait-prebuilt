@@ -113,11 +113,11 @@ build
 #   tests
 # fi
 
-printf "gcc static build\n"
-clean
-export CC="gcc"
-build --enable-static --disable-shared
-tests
+# printf "gcc static build\n"
+# clean
+# export CC="gcc"
+# build --enable-static --disable-shared
+# tests
 
 # if [ "$os" != "freebsd" ] && ldconfig -p | grep -q libasan; then
 #   printf "\ngcc address sanitizer build\n"
