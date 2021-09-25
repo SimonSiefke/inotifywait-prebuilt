@@ -49,10 +49,10 @@ arg1="$1"
 os=$(uname -o | sed "s#GNU/##g" | tr '[:upper:]' '[:lower:]')
 uname_m=$(uname -m)
 
-printf "gcc build\n"
-clean
-export CC="gcc"
-build
+# printf "gcc build\n"
+# clean
+# export CC="gcc"
+# build
 # tests
 
 # if [ -n "$TRAVIS" ] || [ -n "$CI" ]; then
@@ -113,10 +113,10 @@ build
 #   tests
 # fi
 
-# printf "gcc static build\n"
-# clean
-# export CC="gcc"
-# build --enable-static --disable-shared
+printf "gcc static build\n"
+clean
+export CC="gcc"
+build --enable-static --disable-shared
 # tests
 
 # if [ "$os" != "freebsd" ] && ldconfig -p | grep -q libasan; then
